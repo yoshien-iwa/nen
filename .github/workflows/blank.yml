@@ -7,7 +7,6 @@ env:
 permissions:
   id-token: write
   contents: read
-  
 jobs:
   aws-deploy:
     runs-on: ${{ secrets.TEST }}
