@@ -13,7 +13,7 @@ jobs:
     runs-on: ${{ secrets.TEST }}
     steps:
       - uses: actions/checkout@v2
-      - uses: aws-actions/configure-aws-credentials@v1
+      - uses: aws-actions/configure-aws-credentials@master
         with:
           role-to-assume: ${{ env.AWS_ROLE_ARN }}
           aws-region: ap-northeast-1
