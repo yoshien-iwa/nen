@@ -16,6 +16,6 @@ jobs:
       - uses: actions/checkout@v2
       - uses: aws-actions/configure-aws-credentials@master
         with:
-          role-to-assume: ${{ env.AWS_ROLE_ARN }}
+          role-to-assume: ${{ env.AWS_ROLE_ARND }}
           aws-region: ap-northeast-1
       - run: aws sts get-caller-identity
