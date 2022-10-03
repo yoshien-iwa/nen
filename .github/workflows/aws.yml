@@ -29,7 +29,7 @@ jobs:
 
      # AWS CLIにキーを設定をする
      - name: AWS set Credentials
-       uses: aws-actions/configure-aws-credentials@v1
+       uses: aws-actions/configure-aws-credentials@master
        with:
          role-to-assume: ${{ secrets.AWS_RPN }}
          #aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY }}
