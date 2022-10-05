@@ -1,5 +1,6 @@
 name: EC2 auto deploy
 
+
 on:
   push:
     branches:
