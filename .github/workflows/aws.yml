@@ -54,7 +54,7 @@ jobs:
          echo "${{ secrets.GIT_PRIVATE_KEY }}" > private_key
          chmod 600 private_key
          eval `ssh-agent`
-         ssh-add -K private_key
+         ssh-add private_key
          ssh -oStrictHostKeyChecking=no ${{ secrets.EC2_USER_NAME }}@${{ secrets.EC2_HOST_NAME }} -i private_key -A "cd /home/ec2-user/test/nen/ && git fetch --prune && git checkout main && git pull origin main"
 
          # SSHのセキュリティグループを閉じる
